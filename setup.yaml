@@ -6,6 +6,13 @@
   gather_facts: False
   pre_tasks:
     - name: Install python for Ansible
-      raw: test -e /usr/bin/python || (apt -qqy update && apt install -qy python3-minimal)
+      raw: test -e /usr/bin/python || (apt -qqy update && apt install -qy python-minimal)
       changed_when: False
-#    - setup:
+  tasks:
+  - name: install packages
+    apt:
+      update_cache: yes 
+      pkg:
+      - ntp
+      - python-apt
+
