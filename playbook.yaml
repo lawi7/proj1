@@ -1,8 +1,11 @@
 ---
 - hosts: all
   become: yes
-  tasks:
-  - name: Ensure NTP is installed.
-    yum: name=ntp state=present
-  - name: ENsure NTP is running.
-    service: name=ntpd state=started enabled=yes
+  vars:
+   - php_packages:
+       - php
+       - php-cli
+       - php-common
+       - php-mysql
+  roles:
+    - { role: geerlingguy.php }
