@@ -1,0 +1,11 @@
+---
+- name: deploy dev
+  hosts: all
+  become: yes
+
+  gather_facts: False
+  pre_tasks:
+    - name: Install python for Ansible
+      raw: test -e /usr/bin/python || (apt -qqy update && apt install -qy python3-minimal)
+      changed_when: False
+#    - setup:

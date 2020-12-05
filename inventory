@@ -1,0 +1,13 @@
+[app1]
+192.168.33.10
+
+[web]
+192.168.5.82
+
+[servers:children]
+app1
+#web
+
+[servers:vars]
+ansible_ssh_user=vagrant
+ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
