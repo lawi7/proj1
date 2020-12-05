@@ -15,4 +15,5 @@
       pkg:
       - ntp
       - python-apt
+      - unzip
 

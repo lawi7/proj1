@@ -17,6 +17,7 @@
        - php-mysql
        - php-apcu
        - php-fpm
+       - php-mbstring
 #       - php-devel
   roles:
     - { role: geerlingguy.php }
