@@ -16,4 +16,5 @@
       - ntp
       - python-apt
       - unzip
+      - mysql-server
 
