@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
    config.vm.network "private_network", ip: "192.168.33.10"
 
    config.vm.synced_folder "pub", "/var/www/html/pub"
+   config.vm.synced_folder "src", "/var/www/src"
 
    config.vm.provider "virtualbox" do |vb|
      vb.memory = "1024"
